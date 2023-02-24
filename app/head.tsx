@@ -1,7 +1,7 @@
 export default function Head() {
   return (
     <>
-      <title>Adam's Hiking blog</title>
+      <title>Hikingdreams</title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <link rel="icon" href="/favicon.ico" />
     </>
