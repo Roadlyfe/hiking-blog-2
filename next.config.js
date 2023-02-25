@@ -4,4 +4,7 @@ module.exports = {
   experimental: {
     appDir: true,
   },
+  images: {
+    domains: ["i.ibb.co"]
+  }
 };
