@@ -1,19 +1,31 @@
 import { previewData } from "next/headers";
+import { groq } from "next-sanity";
+import { client } from "../../lib/sanity.client";
 
-function homePage() {
-  
-  if(previewData()) {
+const query = groq`
+*[_type=='post'] {
+  ...,
+  author->,
+  catagories[]->
+} | order(_createdAt desc)
+`;
+
+export default async function homePage() {
+
+  if (previewData()) {
     return (
       <div>Preview Mode</div>
     )
-    }
-     
-    return (
-      <div>
-        <h1>Not in Preview Mode</h1>
-      </div>
-    );
   }
-      
 
-export default homePage 
+  const posts = await client.fetch(query);
+  
+  return (
+    <div>
+      <h1>Not in Preview Mode</h1>
+    </div>
+  );
+}
+
+
+
