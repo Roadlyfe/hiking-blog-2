@@ -5,7 +5,7 @@ type Props = {
 function BlogList({posts}: Props) {
   return (
     <div>
-      BlogList
+      <hr className="border-[#02c39a] mb-10" />
     </div>
   )
 }
