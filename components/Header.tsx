@@ -20,7 +20,7 @@ function Header() {
             <div>
                 <Link
                     href="https://www.themanape.com/"
-                    className="px-5 py-3 text-sm md:text-base bg-gray-900 text-[#ffbf69] flex items-center rounded-full text-center"
+                    className="px-5 py-3 text-sm md:text-base bg-gray-900 text-[#83c5be] flex items-center rounded-full text-center"
                 >
                     Check out my ongoing artistic collaboration with Illustrator Adam Lott
                 </Link>

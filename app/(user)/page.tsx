@@ -9,7 +9,7 @@ const query = groq`
 *[_type=='post'] {
   ...,
   author->,
-  catagories[]->
+  categories[]->
 } | order(_createdAt desc)
 `;
 
@@ -19,7 +19,7 @@ export default async function homePage() {
     return (
       <PreviewSuspense fallback={(
         <div role="status">
-          <p className="text-center text-lg animate-pulse text-[#06d6a0]">Loading Preview Data...</p>
+          <p className="text-center text-lg animate-pulse text-[#a3b18a]">Loading Preview Data...</p>
         </div>
       )}
       >

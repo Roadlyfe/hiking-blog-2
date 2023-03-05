@@ -6,9 +6,9 @@ function Banner() {
             <div>
                 <h1 className="text-7xl">Failure is not a Function</h1>
                 <h2 className="mt-5 md:mt-0">
-                    Welcome to{" "}
-                    <span className="underline decoration-4 decoration-[#02c39a]">
-                        the inside of my brain
+                    Every day I'm {" "}
+                    <span className="underline decoration-4 decoration-[#83c5be]">
+                        hustling rustling
                     </span>{" "}
                 </h2>
             </div>
