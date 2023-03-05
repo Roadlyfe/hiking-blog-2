@@ -1,3 +1,4 @@
+import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import urlFor from "../lib/urlFor";
 
@@ -9,7 +10,7 @@ function BlogList({ posts }: Props) {
     return (
         <div>
             <hr className="border-[#a3b18a] mb-10" />
-            <div>
+            <div className="grid grid-cols-1 md:grid-cols-2 px-10 gap-10 gap-y-16 pb-24">
                 {/* Posts */}
                 {posts.map(post => (
                     <div key={post._id} className="flex flex-col group cursor-pointer">
@@ -34,16 +35,24 @@ function BlogList({ posts }: Props) {
                                             )}
                                     </p>
                                 </div>
-                                <div className="bg-[#83c5be] text-center text-black px-3 py-1 text-sm font-semibold">
+                                <div className="flex flex-col md:flex-row gap-y-2 items-center">
                                     
                                     {post.categories && post.categories.map(category => (
-                                        <div>
+                                        <div className="bg-[#a3b18a] text-center Text-black px-3 py-1 rounded-full text-sm font-semibold">
                                             <p>{category.title}</p>
                                         </div>
                                     ))}
                                 </div>
                             </div>
                         </div>
+                        <div className="mt-5 flex-1">
+                            <p className="underline text-lg font-bold">{post.title}</p>
+                            <p className="line-clamp-2 text-gray-500">{post.description}</p>
+                        </div>
+                        <p className="mt-5 font-bold flex items-center group-hover:underline">
+                            Read Post 
+                            <ArrowUpRightIcon className="ml-2 h-4 w-4" />
+                        </p>
                     </div>
                 ))}
             </div>
