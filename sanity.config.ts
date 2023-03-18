@@ -1,3 +1,4 @@
+import { getDefaultDocumentNode } from './structure';
 import { myTheme } from './theme';
 import {defineConfig, StudioNavbar} from 'sanity';
 import {deskTool} from 'sanity/desk';
@@ -15,7 +16,9 @@ export default defineConfig({
   title: 'Hiking Blog Studio',
   projectId,
   dataset,
-  plugins: [deskTool(), visionTool()],
+  plugins: [deskTool({ 
+    defaultDocumentNode: getDefaultDocumentNode,
+  }), visionTool()],
   schema: {
     types: schemaTypes,
   },

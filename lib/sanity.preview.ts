@@ -4,7 +4,7 @@ import { definePreview } from "next-sanity/preview";
 import { projectId, dataset } from "./sanity.client";
 
 function onPublicAccessOnly() {
-    throw new Error(`Unable to load preview: you are currently not logged in `);
+    throw new Error(`Unable to load preview: you are currently not logged in`);
 }
 
 if (!projectId || !dataset ) {
