@@ -11,7 +11,7 @@ function Header() {
                         className="rounded-full"
                         src="https://i.ibb.co/xhGRKfn/me4portfolio.jpg"
                         width={50}
-                        height={50}
+                        height={64}
                         alt="logo"
                     />
                 </Link>
